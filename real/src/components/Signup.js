@@ -11,7 +11,7 @@ function Signup() {
 
   const handleSignup = () => {
     console.log(name, password, email);
-    axios.post('http://localhost:3000/api/auth/signup', { name, password, email })
+    axios.post('https://xenonstack-task1.onrender.com/api/auth/signup', { name, password, email })
       .then(response => {
         setMessage('Signup successful!');
       })

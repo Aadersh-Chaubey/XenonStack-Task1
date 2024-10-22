@@ -20,7 +20,7 @@ function Login() {
 },[])
 
   const handleLogin = () => {
-    axios.post('http://localhost:8000/api/auth/login', { email, password })
+    axios.post('https://xenonstack-task1.onrender.com/api/auth/login', { email, password })
       .then(response => {
         console.log('Logged in:', response.data);
 

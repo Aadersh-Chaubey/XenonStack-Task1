@@ -28,7 +28,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchProperties = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/fetch/data');
+        const response = await axios.get('https://xenonstack-task1.onrender.com/api/fetch/data');
         setProperties(response.data); // Assuming the API returns an array of properties
         setFilteredProperties(response.data); // Initially, show all properties
         setLoading(false); // Set loading to false when data is fetched
@@ -48,7 +48,7 @@ const HomePage = () => {
     console.log(min,max);
 
     try {
-      const response = await axios.get('http://localhost:8000/api/fetch/data', {
+      const response = await axios.get('https://xenonstack-task1.onrender.com/api/fetch/data', {
         params: { min, max },
       });
 
