@@ -12,7 +12,12 @@ dotenv.config();
 const cors = require('cors');
 
 // Use CORS to allow requests from frontend (React)
-app.use(cors());
+app.use(cors({
+    origin:"https://xenon-stack-task1-seven.vercel.app",
+    methods:["POST","GET"],
+    credentials:true
+    
+}));
 app.use(express.json());
 
 // API Routes
